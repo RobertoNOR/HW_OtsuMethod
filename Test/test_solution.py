@@ -147,6 +147,5 @@ class TestOtsuMethod(TestCase):
         test_array_of_rgb = [
             [[255, 0, 0] for _ in range(100)] for _ in range(50)  # 100x50 красное изображение
         ]
-        result = otsu_method(test_array_of_rgb)
-        # Ожидаемое бинарное изображение (все красные пиксели должны быть преобразованы в 1)
-        self.assertEqual(result, [[1 for _ in range(100)] for _ in range(50)])
+        # Ожидаемое бинарный массив (все красные пиксели должны быть преобразованы в 1)
+        self.assertEqual(otsu_method(test_array_of_rgb), [[1 for _ in range(100)] for _ in range(50)])
